@@ -456,6 +456,9 @@ section.home {
 .feedback .voices .voice p {
   margin-top: 1rem;
 }
+
+/* article section */
+
 /* -----Media section -------- */
 
 @media (max-width: 1020px) {
@@ -533,6 +536,9 @@ section.home {
   }
   .destination .container .container-box .content {
     font-size: 0.8rem;
+  }
+  .feedback .container p {
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 607px) {
