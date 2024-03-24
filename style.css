@@ -528,6 +528,9 @@ section.home {
   list-style: none;
   color: #666;
 }
+
+/* footer section */
+
 /* -----Media section -------- */
 
 @media (max-width: 1020px) {
