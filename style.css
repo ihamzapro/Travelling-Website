@@ -332,6 +332,10 @@ section.home {
   transform: translate(-200px);
   opacity: 0;
 }
+.destination .gallery .box {
+  transform: translate(0, 100px);
+  opacity: 0;
+}
 
 /* feature section */
 
@@ -405,6 +409,10 @@ section.home {
   font-weight: 500;
   color: var(--white-color);
 }
+.featured .gallery .box {
+  transform: translate(0, 100px);
+  opacity: 0;
+}
 /* ------feedback section------ */
 
 .feedback {
@@ -472,7 +480,16 @@ section.home {
 .feedback .voices .voice p {
   margin-top: 1rem;
 }
-
+.feedback .container .label,
+.feedback .container .heading,
+.feedback .container .paragraph {
+  transform: translate(0, 10px);
+  opacity: 0;
+}
+.feedback .voices .voice {
+  transform: translate(0 100px);
+  opacity: 0;
+}
 /* article section */
 .article {
   padding-top: 3rem;
@@ -543,6 +560,15 @@ section.home {
   margin-top: 0.3rem;
   list-style: none;
   color: #666;
+}
+.article .label,
+.article .heading {
+  opacity: 0;
+}
+.article .latest-article,
+.article .more-article .box {
+  transform: translate(-200px, 0);
+  opacity: 0;
 }
 
 /* footer section */

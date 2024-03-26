@@ -60,13 +60,66 @@ function swipeAnimation(triggerSelector, boxSelectors) {
   });
 }
 
+function galleryAnimation(triggerSelector, boxSelectors) {
+  const timeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerSelector,
+      start: "top 100%",
+      end: "bottom 100%",
+      scrub: 1,
+    },
+  });
+  boxSelectors.forEach((boxSelectors) => {
+    timeline.to(boxSelectors, {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+    });
+  });
+}
+
 animateContent([
   ".home .content h5, .home .content h1, .home .content p, .home .content .search",
 ]);
 
 scrollTriggerAnimation(".travel", [".travel .box1"]);
 
+scrollTriggerAnimation(".feedback .container", [
+  ".feedback .label",
+  ".feedback .heading",
+  ".feedback .heading",
+]);
+
+scrollTriggerAnimation(".article", [".article .label", ".article .heading"]);
+
 swipeAnimation(".destination", [
   ".destination .heading",
   ".destination .content",
+]);
+swipeAnimation(".article", [
+  ".article .latest-article",
+  ".article .box1",
+  ".article .box2",
+  ".article .box3",
+]);
+galleryAnimation(".destination .gallery", [
+  ".destination .gallery .box1",
+  ".destination .gallery .box2",
+  ".destination .gallery .box3",
+  ".destination .gallery .box4",
+  ".destination .gallery .box5",
+]);
+galleryAnimation(".featured .gallery", [
+  ".featured .gallery .box1",
+  ".featured .gallery .box2",
+  ".featured .gallery .box3",
+  ".featured .gallery .box4",
+]);
+galleryAnimation(".feedback .voices", [
+  ".feedback .voices .box1",
+  ".feedback .voices .box2",
+  ".feedback .voices .box3",
+  ".feedback .voices .box4",
+  ".feedback .voices .box5",
+  ".feedback .voices .box6",
 ]);
